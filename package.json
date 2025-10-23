@@ -1,10 +1,10 @@
 {
   "name": "ababil",
   "version": "1.2.0",
-  "description": "💫 CLI portfolio for Ababil Hossain",
+  "description": "CLI portfolio for Ababil Hossain",
   "main": "index.js",
   "bin": {
-    "ababil": "./index.js"
+    "ababil": "./dist/index.js"
   },
   "type": "commonjs",
   "scripts": {
