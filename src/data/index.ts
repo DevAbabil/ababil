@@ -1,7 +1,3 @@
-import fs from "fs";
-import path from "path";
-const pkg = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "package.json"), "utf-8"));
-
 export default {
   about: {
     name: "Ababil Hossain",
@@ -69,10 +65,10 @@ export default {
     },
   },
   timestamp: {
-    createdAt: pkg?.createdAt,
+    createdAt: "2024-03-02",
     updatedAt: new Date().toLocaleDateString("en-CA", {
       timeZone: "Asia/Dhaka",
     }),
   },
-  version: pkg?.version,
+  version: "2.0.0",
 };

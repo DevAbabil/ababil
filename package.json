@@ -1,6 +1,6 @@
 {
   "name": "ababil",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "CLI portfolio for Ababil Hossain",
   "main": "index.js",
   "bin": {
