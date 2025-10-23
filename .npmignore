@@ -3,3 +3,4 @@ scripts/
 .gitignore
 tsconfig.json
 tsup.config.ts
+banner.ts
