@@ -58,7 +58,7 @@ npx ababil
 ### **yarn dlx**
 
 ```bash
-yarn dlx ababil
+yarn exec ababil
 ```
 
 ### **pnpm dlx**
