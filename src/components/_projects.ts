@@ -1,35 +1,45 @@
 import data from "@/data";
 import chalk from "chalk";
+import wrapAnsi from "wrap-ansi";
 
-const project = data.projects;
+interface Project {
+  label: string;
+  description: string;
+  source: string;
+}
 
-const projects = () =>
-  `
+interface ProjectCollection {
+  [key: string]: Project;
+}
+
+const project: ProjectCollection = data.projects;
+
+const terminalWidth = process.stdout.columns || 80;
+
+const formatItem = (p: Project): string => {
+  const bullet = chalk.green("•");
+  const title = chalk.bold.white(p.label);
+  const desc = wrapAnsi(chalk.gray(p.description), terminalWidth - 4, { hard: false });
+  const source = chalk.blue.underline(p.source);
+
+  return [`${bullet} ${title}`, `  → ${desc}`, `  Source: ${source}`].join("\n");
+};
+
+const projects = (): string => `
 ${chalk.greenBright.bold("🌐 Featured Projects:")}
 
-  • ${chalk.bold(project.cutefetch.label)}        →  ${chalk.white(project.cutefetch.description)}
-                        Source : ${chalk.blue.underline(project.cutefetch.source)}
- 
-  • ${chalk.bold(project["emoji-picker"].label)}     →  ${chalk.white(project["emoji-picker"].description)}
-                        Source : ${chalk.blue.underline(project["emoji-picker"].source)}
- 
-  • ${chalk.bold(project.sigla.label)}            →  ${chalk.white(project.sigla.description)}
-                        Source : ${chalk.blue.underline(project.sigla.source)}
- 
-  • ${chalk.bold(project.siteviews.label)}        →  ${chalk.white(project.siteviews.description)}
-                        Source : ${chalk.blue.underline(project.siteviews.source)} 
- 
-  • ${chalk.bold(project["react-siteviews"].label)}  →  ${chalk.white(project["react-siteviews"].description)}
-                        Source : ${chalk.blue.underline(project["react-siteviews"].source)}
- 
-  • ${chalk.bold(project["make-public"].label)}      →  ${chalk.white(project["make-public"].description)}
-                        Source : ${chalk.blue.underline(project["make-public"].source)}
- 
-  • ${chalk.bold(project["gen-table"].label)}        →  ${chalk.white(project["gen-table"].description)}
-                        Source : ${chalk.blue.underline(project["gen-table"].source)}
- 
-  • ${chalk.bold(project["mongoose-qb"].label)}      →  ${chalk.white(project["mongoose-qb"].description)}
-                        Source : ${chalk.blue.underline(project["mongoose-qb"].source)}
+${[
+  project.cutefetch,
+  project["emoji-picker"],
+  project.sigla,
+  project.siteviews,
+  project["react-siteviews"],
+  project["make-public"],
+  project["gen-table"],
+  project["mongoose-qb"],
+]
+  .map(formatItem)
+  .join("\n\n")}
 `;
 
 export default projects;

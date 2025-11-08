@@ -6,16 +6,17 @@ export default {
     address: "Dinajpur, Bangladesh",
   },
   skills: {
-    frontend: ["Tailwind", "MUI", "Shadcn-UI", "React", "Next.js", "Progressive Web Apps"],
+    frontend: ["ReactJS", "NextJS", "TailwindCSS", "PWA"],
     backend: ["Node.js", "Express.js", "Moduler-MVC"],
     database: ["MongoDB", "PostgreSQL", "Redis"],
-    tools: ["Git", "GitHub", "GitLab", "NPM", "VS Code", "Postman", "Figma", "Linux"],
+    tools: ["Git", "GitHub", "NPM", "VS Code", "Postman", "Figma"],
     language: ["JavaScript", "TypeScript", "ShellScript"],
   },
   contact: {
     website: "https://devababil.com",
     github: "https://github.com/DevAbabil",
     gitlab: "https://gitlab.com/DevAbabil",
+    gmail: "ababil.webdev@gmail.com",
     x: "https://x.com/DevAbabil",
     linkedIn: "https://www.linkedin.com/in/DevAbabil",
     facebook: "https://facebook.com/programmerababil",
@@ -70,5 +71,5 @@ export default {
       timeZone: "Asia/Dhaka",
     }),
   },
-  version: "2.0.2",
+  version: "2.0.3",
 };
