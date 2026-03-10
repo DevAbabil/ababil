@@ -37,6 +37,7 @@ ${[
   project["make-public"],
   project["gen-table"],
   project["mongoose-qb"],
+  project["jobx-cli"],
 ]
   .map(formatItem)
   .join("\n\n")}

@@ -64,6 +64,11 @@ export default {
       source: "https://github.com/DevAbabil/mongoose-qb",
       description: "Mongoose query builder for filtering, searching, sorting, and pagination.",
     },
+    "jobx-cli": {
+      label: "JobX - AI powered CLI tool",
+      source: "https://jobx.devababil.com",
+      description: "AI powered CLI automates job application emails and Google Sheets tracking.",
+    },
   },
   timestamp: {
     createdAt: "2024-03-02",
