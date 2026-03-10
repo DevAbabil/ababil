@@ -19,7 +19,7 @@ export default {
     gmail: "ababil.webdev@gmail.com",
     x: "https://x.com/DevAbabil",
     linkedIn: "https://www.linkedin.com/in/DevAbabil",
-    facebook: "https://facebook.com/programmerababil",
+    facebook: "https://facebook.com/ababil.dev",
     whatsapp: "01937853223",
     discord: "https://discord.gg/DevAbabil",
   },
